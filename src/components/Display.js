@@ -34,7 +34,7 @@ function Display({info}) {
              </div>
          </div> 
          <div className="card-right">
-            <p>Date: {new Date(info.dt).toDateString()}</p>
+            <p className="display_date">Date: {new Date(info.dt *1000).toDateString()}</p>
             <p>Wind speed: {info.wind_speed} m/s</p>
             <p>Cloudiness, %: {info.clouds}</p>
             <p>Humidity, %: {info.humidity}</p>

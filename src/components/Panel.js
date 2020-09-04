@@ -16,12 +16,14 @@ function Panel({condition, date, iconURL, id, handleClick, temp }) {
 
     return(
         <div className="card-list" onClick={() => handleClick(id)} ref={ref}>
+            <div>
+                <span className="day">{monthNames[date.getMonth()]}</span>
+                <p className="day">{date.getDate()}</p>
+            </div>
+            
             <div><img src={iconURL} alt="weather_icon"/></div>
             <p>{condition}</p>
-            <div>
-                <p className="day">{date.getDate()}</p>
-                <span className="day">{monthNames[date.getMonth()]}</span>
-            </div>
+            
             <p className="temperature">{temp} °C</p>
         </div>
     )

@@ -10,96 +10,128 @@ body {
     align-items: center;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    background: rgb(245, 180, 60);
+   
     overflow-x: hidden;
 }
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 
-.card-list{
-    border: 1px solid rgba(0,0,0,0.3);
-    margin: 0 10px;
-    padding: 15px;
-    text-align: center;
-    transition: all 0.2s ease-out;
-    cursor: pointer;
-}
-.card-list:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 4px rgba(0,0,0,0.3);
-}
-.card-list:active {
-    transform: scale(1);
-    box-shadow: none;
-}
-.card-list h5 {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-.card-list p {
-    margin-top: 0.2rem;
-}
-.day {
-    font-size: 0.8rem;
-    color: orangered;
-    font-weight: lighter;
-}
-.table {
-    display: flex;
+@media screen and (min-width: 500px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     
-}
-
-/*display*/
-
-.display-card {
-    width: 40vw;
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 40vh;
-    overflow: hidden;
-}
-
-.card-left, .card-right {
-    padding: 2rem;
-}
-.card-left{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: orangered;
-    position: relative;
-    overflow: hidden;
-}
-.card-left_sunny {
-    background-image: url('./images/sun.jpg');
-}
-.card-left_rain {
-    background-image: url('./images/rain.jpg');
-}
-.card-left_cloudy {
-    background-image: url('./images/cloud.jpg');
-}
-
-.card-wrapper {
-    position: absolute;
-    background: rgba(49, 13, 19, 0.6);
-    right: 10px;
-    top: 10px;
-    padding: 20px;
-}
-.card-wrapper h2 {
-    font-size: 2.5rem;
-}
-.card-wrapper h4 {
-    font-size: 1.4rem;
-}
-
-.card-right p {
-    font-size: 2.5rem;
+    
+    .card-list{
+        border: 1px solid rgba(187, 187, 187, 0.3);
+        margin: 0 10px;
+        padding: 15px;
+        text-align: center;
+        transition: all 0.2s ease-out;
+        cursor: pointer;
+        background-color: rgb(245, 180, 60);
+    }
+    .card-list:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 4px rgba(0,0,0,0.3);
+    }
+    .card-list:active {
+        transform: scale(1);
+        box-shadow: none;
+    }
+    .card-list h5 {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+    
+    .day {
+        font-size: 1rem;
+        color: orangered;
+        font-weight: bolder;
+    }
+    .table {
+        display: flex;
+        margin-top: 2em;
+    }
+    
+    /*display*/
+    
+    .display-card {
+        width: 40vw;
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 40vh;
+        overflow: hidden;
+    }
+    
+    .card-left, .card-right {
+        padding: 2rem;
+    }
+    .card-left{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: orangered;
+        position: relative;
+        overflow: hidden;
+    }
+    .card-left_sunny {
+        background-image: url('./images/sun.jpg');
+    }
+    .card-left_rain {
+        background-image: url('./images/rain.jpg');
+    }
+    .card-left_cloudy {
+        background-image: url('./images/cloud.jpg');
+    }
+    
+    .card-wrapper {
+        position: absolute;
+        background: rgba(49, 13, 19, 0.6);
+        right: 10px;
+        top: 10px;
+        padding: 20px;
+    }
+    .card-wrapper h2 {
+        font-size: 2.5rem;
+    }
+    .card-wrapper h4 {
+        font-size: 1.4rem;
+    }
+    
+    .card-right {
+        background-color: rgb(245, 180, 60);
+    }
+    .card-right p {
+        font-size: 1rem;
+    }
+    
+    p.display_date {
+        
+        font-weight: bold;
+        margin-bottom: 2em;
+    }
+    
+    .city {
+        font-size: 1.2rem;
+    }
+    .city_label {
+        font-weight: bolder;
+        padding-right: 1rem;
+    }
+    
+    .city_select {
+        line-height: 1.3;
+        padding: .6em 1.4em .5em .8em;
+        border: 1px solid #aaa;
+        border-radius: .5em;
+        background-color: rgb(245, 72, 9);
+        color: white; 
+        font-size: 0.85rem;
+    }
+    
+    
 }
